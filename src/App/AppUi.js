@@ -16,8 +16,24 @@ function AppUi() {
     setOpenTabModal,
     apps,
     setApps,
-   } = React.useContext(AppContext) 
+  } = React.useContext(AppContext) 
 
+   console.group('appsss')
+   console.log(apps)
+
+  
+
+
+   const lola = apps?.map(x => (
+           console.log(x)       
+    ))
+
+    console.log(lola)
+
+
+
+
+   console.groupEnd()
 
   function sayhi(){
     console.log('sayHi World')
@@ -36,9 +52,13 @@ function AppUi() {
     />
 
     <AppsHome>
-        {apps?.map(x => (
-          
-        ))}
+      {apps?.map(x => (
+        <AppContainer
+            key={x}
+            text={x}
+        />
+      ))}
+        
     </AppsHome>
         
         

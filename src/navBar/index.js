@@ -24,6 +24,9 @@ function NavBar(props){
         console.log(newTab.apps)
 
         setApps(newTab.apps)
+
+        console.log('neuvas apps')
+        console.log(apps)
     
 
         console.groupEnd()
@@ -44,8 +47,8 @@ function NavBar(props){
             +
             </button>
 
-            {userName.tabs?.map(x => (
-                <div className="userTabs"> 
+           {userName.tabs?.map(x => (
+                 <div className="userTabs"> 
                     <button 
                         className="div__button--tabs"
                         onClick={() => {showAppsButton(x.tabsName)}}

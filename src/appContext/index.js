@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 function AppProvider(props){
     
     const [openTabModal, setOpenTabModal] =  React.useState(false)
-    const[apps,setApps] = React.useState('')
+    const[apps,setApps] = React.useState([])
 
     return(
         <AppContext.Provider value={{

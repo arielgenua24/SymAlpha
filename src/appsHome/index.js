@@ -6,6 +6,7 @@ function AppsHome(props){
     return(
         <>
         <div className="div__appsHome">
+            {props.children}
         </div>
         </>
         
@@ -15,15 +16,3 @@ function AppsHome(props){
 export {AppsHome} 
 
 
-/*{userName.tabs?.map(x => (
-                <div className="userTabs"> 
-                    <button 
-                        className="div__button--tabs"
-                        onClick={() => {showAppsButton(x.tabsName)}}
-                        >
-                        {x.tabsName} 
-                    </button>
-                   
-                </div>
-                   
-            ))} */

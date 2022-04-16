@@ -2,13 +2,12 @@ import React from "react";
 import { AppContext } from '../../appContext';
 import {tabs} from '../../objectTabs'
 import {userName} from '../../objectUser'
-
-
 import './input.css'
+let newTab;
 
 function InputTabName(){
 
-    let newTab;
+    
 
 
     const [value,setValue] = React.useState('')
@@ -37,7 +36,7 @@ function InputTabName(){
 
         newTab = new tabs({
             tabsName: `${value}`,
-            apps: ['x']
+            apps: ['Spotify','Notion','Youtube']
             
         })
         userName.addTabs(newTab)
@@ -94,7 +93,7 @@ function InputTabName(){
 
 }
 
-export {InputTabName}
+export {InputTabName,newTab}
 
 
 /*

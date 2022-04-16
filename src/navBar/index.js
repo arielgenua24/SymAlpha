@@ -1,22 +1,36 @@
 import React from "react";
 import {userName} from '../objectUser'
+import {newTab} from '../modalTabName/inputTabName'
+import { AppContext } from '../appContext';
 import './navBar.css'
 
 function NavBar(props){
 
-    let tabs;
+    const {
+        openTabModal,
+        setOpenTabModal,
+        apps,
+        setApps,
+    } = React.useContext(AppContext) 
 
     const onClickButton =() => {
         props.setOpenTabModal(prevState => !prevState)
     }
 
+    const showAppsButton =(param) => {
+        console.group('hola')
+        console.log(param)
+        console.log(newTab)
+        console.log(newTab.apps)
 
-    let array = userName.tabs
- 
+        setApps(newTab.apps)
+    
 
-    /*console.log('filtrador')
-    const tabsNamesFilter = array.map(x => x.tabsName)
-    console.log(tabsNamesFilter) */
+        console.groupEnd()
+
+    }
+
+
 
     return(
 
@@ -32,7 +46,13 @@ function NavBar(props){
 
             {userName.tabs?.map(x => (
                 <div className="userTabs"> 
-                    {x.tabsName} 
+                    <button 
+                        className="div__button--tabs"
+                        onClick={() => {showAppsButton(x.tabsName)}}
+                        >
+                        {x.tabsName} 
+                    </button>
+                   
                 </div>
                    
             ))}

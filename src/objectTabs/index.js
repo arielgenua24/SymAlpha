@@ -15,7 +15,7 @@ const ariel = 'ariel'
 
 const prueba = new tabs({
     tabsName: `${ariel}`,
-    apps: ['x']
+    apps: ['Spotify','Notion','Youtube']
     
 }) 
 

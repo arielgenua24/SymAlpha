@@ -7,7 +7,9 @@ function AppsHome(props){
         <>
         <div className="div__appsHome">
             {props.children}
+
         </div>
+
         </>
         
     )

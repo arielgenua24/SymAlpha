@@ -1,11 +1,14 @@
 import React from 'react';
-import {tabs} from '../objectTabs'
 import { AppContext } from '../appContext';
 import { ModalTab } from '../modalTabName'
+import {ModalApp} from '../modalAddApp'
 import {NavBar} from '../navBar';
 import {InputTabName} from '../modalTabName/inputTabName'
+import { InputAddApp } from '../modalAddApp/inputAddApp';
 import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
+import { newTab } from '../modalTabName/inputTabName';
+
 
 import './App.css';
 
@@ -14,32 +17,12 @@ function AppUi() {
   const {
     openTabModal,
     setOpenTabModal,
-    apps,
+    openAddAppModal,
+    setOpenAddAppModal,
     setApps,
   } = React.useContext(AppContext) 
 
-   console.group('appsss')
-   console.log(apps)
-
   
-
-
-   const lola = apps?.map(x => (
-           console.log(x)       
-    ))
-
-    console.log(lola)
-
-
-
-
-   console.groupEnd()
-
-  function sayhi(){
-    console.log('sayHi World')
-  }
-
-
   return (
     <>
   
@@ -52,10 +35,12 @@ function AppUi() {
     />
 
     <AppsHome>
-      {apps?.map(x => (
+      {newTab?.apps?.map(x => (
         <AppContainer
-            key={x}
-            text={x}
+            key={x.appName}
+            appName={x.appName}
+            appUrl={x.appUrl}
+            appLogo={x.appLogo}
         />
       ))}
         
@@ -69,6 +54,12 @@ function AppUi() {
           <ModalTab>
             <InputTabName/>
           </ModalTab>
+    )}
+
+    {!!openAddAppModal && (
+          <ModalApp>
+            <InputAddApp/>
+          </ModalApp>
     )}
     
   

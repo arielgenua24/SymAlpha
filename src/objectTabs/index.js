@@ -1,23 +1,21 @@
 class tabs {
     constructor({
         tabsName,
-        apps = []
+        apps = ['']
     }){
         this.tabsName = tabsName;
         this.apps = apps;
     }
-    sayHi(){
-        console.log('hola!' + this.tabsName)
+    addApp(param){
+        this.apps.push(param)
+    }
+    deleteApp(){
+        this.apps.pop()
     }
 }
 
-const ariel = 'ariel'
 
-const prueba = new tabs({
-    tabsName: `${ariel}`,
-    apps: ['Spotify','Notion','Youtube']
-    
-}) 
+
 
 
 

@@ -8,8 +8,6 @@ let newTab;
 function InputTabName(){
 
     
-
-
     const [value,setValue] = React.useState('')
 
     const {
@@ -36,7 +34,6 @@ function InputTabName(){
 
         newTab = new tabs({
             tabsName: `${value}`,
-            apps: ['Spotify','Notion','Youtube']
             
         })
         userName.addTabs(newTab)

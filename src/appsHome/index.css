@@ -5,6 +5,11 @@
     position: absolute;
 }
 
-.div__app--container{
-  
+.div__buttons--container {
+    background-color: bisque;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
 }

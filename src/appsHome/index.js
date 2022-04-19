@@ -9,14 +9,19 @@ function AppsHome(props){
     const {
         openAddAppModal,
         setOpenAddAppModal,
-        currentApp,
-        setCurrentApp
+        currentTab,
+        setCurrentTab
     } = React.useContext(AppContext) 
+
+    let currentTabLength = currentTab.length;
 
     const onClick = () => {
         setOpenAddAppModal(true)
+        console.log('hgoa')
+        console.log(currentTabLength)
     }
 
+    
 
 
     return(
@@ -25,14 +30,20 @@ function AppsHome(props){
             {props.children}
 
         </div>
-
-        <button className="button--openAll">
-            </button>
-
-        <button 
+        
+        {currentTabLength >= 1 && (
+        <div className="div__buttons--container">
+         <button 
+            className="button--openAll">
+         </button>
+         <button 
             className="button--addApps"
-            onClick={onClick}
-        ></button>
+            onClick={onClick}></button>
+
+        </div>
+        )}
+
+        
 
 
         </>

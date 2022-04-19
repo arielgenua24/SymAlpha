@@ -20,8 +20,26 @@ function AppUi() {
     openAddAppModal,
     setOpenAddAppModal,
     setApps,
+    currentTab,
+    setCurrentTab
   } = React.useContext(AppContext) 
 
+  console.group('filter')
+    console.log(newTab)
+    console.log(newTab?.apps)
+
+    console.log(newTab?.tabsName)
+    console.log(currentTab)
+
+    let appsFilter2 = newTab?.apps?.map(tab => tab.tabsName === currentTab)
+    console.log(appsFilter2)
+
+    let appsFilter = newTab?.apps?.filter(app => app.appTabMother === currentTab)
+    console.log(appsFilter)
+
+  console.groupEnd()
+
+  
   
   return (
     <>
@@ -37,7 +55,7 @@ function AppUi() {
     
     {!!newTab && (
       <AppsHome>
-      {newTab?.apps?.map(x => (
+      {appsFilter?.map(x => (
         <AppContainer
             key={x.appName}
             appName={x.appName}

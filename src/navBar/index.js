@@ -3,6 +3,7 @@ import {userName} from '../objectUser'
 import {newTab} from '../modalTabName/inputTabName'
 import { AppContext } from '../appContext';
 import './navBar.css'
+import { tab } from "@testing-library/user-event/dist/tab";
 
 function NavBar(props){
 
@@ -11,6 +12,8 @@ function NavBar(props){
         setOpenTabModal,
         apps,
         setApps,
+        currentTab,
+        setCurrentTab
     } = React.useContext(AppContext) 
 
     const onClickButton =() => {
@@ -19,15 +22,9 @@ function NavBar(props){
 
     const showAppsButton =(param) => {
         console.group('hola')
-        console.log(param)
-        console.log(newTab)
-        console.log(newTab.apps)
-
-        setApps(newTab.apps)
-
-        console.log('neuvas apps')
-        console.log(apps)
-    
+           console.log(param)
+           setCurrentTab(param) //con esto ahora sabemos que nuestra pestaña actual es la que el usaurio toque.
+        
 
         console.groupEnd()
 
@@ -47,13 +44,13 @@ function NavBar(props){
             +
             </button>
 
-           {userName.tabs?.map(x => (
+           {userName.tabs?.map(tab => (
                  <div className="userTabs"> 
                     <button 
                         className="div__button--tabs"
-                        onClick={() => {showAppsButton(x.tabsName)}}
+                        onClick={() => {showAppsButton(tab.tabsName)}}
                         >
-                        {x.tabsName} 
+                        {tab.tabsName} 
                     </button>
                    
                 </div>

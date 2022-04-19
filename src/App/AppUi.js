@@ -34,7 +34,9 @@ function AppUi() {
         setOpenTabModal={setOpenTabModal}
     />
 
-    <AppsHome>
+    
+    {!!newTab && (
+      <AppsHome>
       {newTab?.apps?.map(x => (
         <AppContainer
             key={x.appName}
@@ -45,6 +47,9 @@ function AppUi() {
       ))}
         
     </AppsHome>
+    )}
+    
+    
         
         
         

@@ -7,6 +7,7 @@ function AppProvider(props){
     const [openTabModal, setOpenTabModal] =  React.useState(false)
     const[apps,setApps] = React.useState([])
     const[openAddAppModal,setOpenAddAppModal] = React.useState(false)
+    const [currentTab,setCurrentTab] = React.useState('')
 
     return(
         <AppContext.Provider value={{
@@ -15,7 +16,9 @@ function AppProvider(props){
             apps,
             setApps,
             openAddAppModal,
-            setOpenAddAppModal
+            setOpenAddAppModal,
+            currentTab,
+            setCurrentTab
            }}>
            {props.children}
         </AppContext.Provider>

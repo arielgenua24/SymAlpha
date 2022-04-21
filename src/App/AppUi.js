@@ -9,6 +9,8 @@ import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
 import { newTab } from '../modalTabName/inputTabName';
 import {userName} from '../objectUser'
+import { app,appsDB } from "../objectApps";
+
 
 
 import './App.css';
@@ -25,7 +27,12 @@ function AppUi() {
     setCurrentTab
   } = React.useContext(AppContext) 
 
+
+
   console.group('filter')
+
+  //currentab si funciona
+
     /*console.log(newTab)
     console.log(newTab?.apps)
 
@@ -33,11 +40,12 @@ function AppUi() {
     console.log(currentTab)
 
     let appsFilter2 = newTab?.apps?.map(tab => tab.tabsName === currentTab)
-    console.log(appsFilter2)*/
+    console.log(appsFilter2)
 
     let appsFilter = newTab?.apps?.filter(app => app.appTabMother === currentTab)
     console.log(appsFilter) 
 
+    
 
     
 
@@ -52,8 +60,11 @@ function AppUi() {
     console.log(appsFilter3)
 
     let currentApps = appsFilter3[0]?.apps
-    console.log(currentApps)
+    console.log(currentApps) */
 
+    console.log('web3')
+    let appsFilter = appsDB?.filter(app => app.appTabMother === currentTab)
+    console.log(appsFilter)
 
 
 
@@ -76,7 +87,7 @@ function AppUi() {
     
     {!!newTab && (
       <AppsHome>
-      {currentApps?.map(x => (
+      {appsFilter?.map(x => (
         <AppContainer
             key={x.appName}
             appName={x.appName}
@@ -86,7 +97,7 @@ function AppUi() {
       ))}
         
     </AppsHome>
-    )}
+    )} 
     
     
         

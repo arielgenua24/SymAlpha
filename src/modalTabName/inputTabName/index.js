@@ -26,8 +26,6 @@ function InputTabName(){
         event.preventDefault();
         console.log('chau chau amiguitos')
 
-        
-        
         /*let tabNames = userName.map(tabs => tabs.tabNames )
         console.log(tabNames) */
     

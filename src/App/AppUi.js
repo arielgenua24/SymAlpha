@@ -8,6 +8,7 @@ import { InputAddApp } from '../modalAddApp/inputAddApp';
 import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
 import { newTab } from '../modalTabName/inputTabName';
+import {userName} from '../objectUser'
 
 
 import './App.css';
@@ -25,17 +26,37 @@ function AppUi() {
   } = React.useContext(AppContext) 
 
   console.group('filter')
-    console.log(newTab)
+    /*console.log(newTab)
     console.log(newTab?.apps)
 
     console.log(newTab?.tabsName)
     console.log(currentTab)
 
     let appsFilter2 = newTab?.apps?.map(tab => tab.tabsName === currentTab)
-    console.log(appsFilter2)
+    console.log(appsFilter2)*/
 
     let appsFilter = newTab?.apps?.filter(app => app.appTabMother === currentTab)
-    console.log(appsFilter)
+    console.log(appsFilter) 
+
+
+    
+
+    console.log(userName)
+    console.log(userName.tabs)
+
+    let appsFilter3 = userName?.tabs?.filter(tab => tab?.apps[1]?.appTabMother === currentTab)
+
+
+
+    console.log('soy yo de nuevo')
+    console.log(appsFilter3)
+
+    let currentApps = appsFilter3[0]?.apps
+    console.log(currentApps)
+
+
+
+
 
   console.groupEnd()
 
@@ -55,7 +76,7 @@ function AppUi() {
     
     {!!newTab && (
       <AppsHome>
-      {appsFilter?.map(x => (
+      {currentApps?.map(x => (
         <AppContainer
             key={x.appName}
             appName={x.appName}

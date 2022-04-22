@@ -9,7 +9,6 @@ import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
 import { newTab } from '../modalTabName/inputTabName';
 import {userName} from '../objectUser'
-import { app,appsDB } from "../objectApps";
 
 
 
@@ -23,8 +22,11 @@ function AppUi() {
     openAddAppModal,
     setOpenAddAppModal,
     setApps,
+    apps,
     currentTab,
-    setCurrentTab
+    setCurrentTab,
+    appData,
+    tabsData
   } = React.useContext(AppContext) 
 
 
@@ -63,7 +65,7 @@ function AppUi() {
     console.log(currentApps) */
 
     console.log('web3')
-    let appsFilter = appsDB?.filter(app => app.appTabMother === currentTab)
+    let appsFilter = apps?.filter(app => app.appTabMother === currentTab)
     console.log(appsFilter)
 
 

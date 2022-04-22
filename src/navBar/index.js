@@ -13,9 +13,13 @@ function NavBar(props){
         apps,
         setApps,
         currentTab,
-        setCurrentTab
+        setCurrentTab,
+        tabs,
+        setTabs
     } = React.useContext(AppContext) 
 
+
+    
     const onClickButton =() => {
         props.setOpenTabModal(prevState => !prevState)
     }
@@ -27,6 +31,23 @@ function NavBar(props){
         
 
         console.groupEnd()
+
+    }
+
+    const deleteTab = (param) => {
+        //array.indexOf(2);
+        let tabsArray = tabs
+        console.log(tabsArray)
+
+
+        let tabToDelete = tabs?.filter(tab => tab.tabsName === param)
+        let tabToDeleteIndex = tabsArray.indexOf(tabToDelete)
+
+        tabsArray.splice(tabToDeleteIndex, 1)
+
+        console.log(tabsArray)
+
+        
 
     }
 
@@ -44,13 +65,16 @@ function NavBar(props){
             +
             </button>
 
-           {userName.tabs?.map(tab => (
+           {tabs?.map(tab => (
                  <div className="userTabs"> 
                     <button 
                         className="div__button--tabs"
                         onClick={() => {showAppsButton(tab.tabsName)}}
                         >
                         {tab.tabsName} 
+
+                        
+
                     </button>
                    
                 </div>

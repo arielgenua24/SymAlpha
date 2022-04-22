@@ -18,7 +18,11 @@ function InputAddApp(){
     const{
         setOpenAddAppModal,
         currentTab,
-        setCurrentTab
+        setCurrentTab,
+        appData,
+        tabsData,
+        apps,
+        setApps
     } = useContext(AppContext)
 
     const newName = (event) => {
@@ -44,15 +48,12 @@ function InputAddApp(){
         let appLogo = newApp.logo
         let appTabMother = newApp.tabMother
 
-        appsDB.push({appName,appUrl,appLogo,appTabMother})
-
-        console.log(appsDB)
+        //appData.push({appName,appUrl,appLogo,appTabMother})
+        setApps([...apps,{appName,appUrl,appLogo,appTabMother}])
 
       console.group('nina')
-        console.log(newTab)
-        console.log(newTab.apps)
+        console.log(apps)
 
-        console.log(userName)
       console.groupEnd()
 
      setOpenAddAppModal(false)

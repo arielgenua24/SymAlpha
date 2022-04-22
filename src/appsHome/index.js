@@ -12,7 +12,8 @@ function AppsHome(props){
         openAddAppModal,
         setOpenAddAppModal,
         currentTab,
-        setCurrentTab
+        setCurrentTab,
+        apps
     } = React.useContext(AppContext) 
 
     let currentTabLength = currentTab.length;
@@ -24,7 +25,7 @@ function AppsHome(props){
     }
 
     const openAll = () => {
-        let appsFilter = appsDB?.filter(app => app.appTabMother === currentTab)
+        let appsFilter = apps?.filter(app => app.appTabMother === currentTab)
         console.log(appsFilter)
         openAllFun(appsFilter)
 

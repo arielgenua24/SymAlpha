@@ -1,4 +1,4 @@
-class tabs {
+class objectTabs {
     constructor({
         tabsName,
         apps = ['']
@@ -19,7 +19,7 @@ class tabs {
 
 
 
-export {tabs};
+export {objectTabs};
 
 /* Nucleo const pestanias = []
 

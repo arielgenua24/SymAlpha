@@ -1,6 +1,6 @@
 import React from "react";
 import { AppContext } from '../../appContext';
-import {tabs} from '../../objectTabs'
+import {objectTabs} from '../../objectTabs'
 import {userName} from '../../objectUser'
 import './input.css'
 let newTab;
@@ -13,6 +13,9 @@ function InputTabName(){
     const {
         openTabModal,
         setOpenTabModal,
+        appData,
+        tabs,
+        setTabs
     } = React.useContext(AppContext) 
 
     const onChange = (event) => {
@@ -30,11 +33,12 @@ function InputTabName(){
         console.log(tabNames) */
     
 
-        newTab = new tabs({
+        newTab = new objectTabs({
             tabsName: `${value}`,
             
         })
         userName.addTabs(newTab)
+        setTabs([...tabs, newTab])
 
         
         let array = userName.tabs
@@ -42,10 +46,6 @@ function InputTabName(){
 
         console.log('filtrador')
         const tabsNamesFilter = array.map(x => x.tabsName)
-        console.log(tabsNamesFilter)
-
-
-        console.log(userName)
 
 
         setOpenTabModal(false)

@@ -7,9 +7,22 @@
 
 .div__buttons--container {
     background-color: bisque;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     position: absolute;
+}
+
+.button--openAll {
+    background-color: rgb(191, 247, 158);
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+.button--addApps {
+    background-color: rgb(158, 174, 247);
+    width: 50px;
+    height: 50px;
+    display: flex;
 }

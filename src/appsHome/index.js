@@ -1,6 +1,8 @@
 import React from 'react';
 import './index.css'
 import { AppContext } from '../appContext'
+import {appsDB} from '../objectApps'
+import {openAllFun} from '../openAllFun'
 
 
 
@@ -21,6 +23,17 @@ function AppsHome(props){
         console.log(currentTabLength)
     }
 
+    const openAll = () => {
+        let appsFilter = appsDB?.filter(app => app.appTabMother === currentTab)
+        console.log(appsFilter)
+        openAllFun(appsFilter)
+
+
+
+
+
+
+    }
     
 
 
@@ -34,7 +47,8 @@ function AppsHome(props){
         {currentTabLength >= 1 && (
         <div className="div__buttons--container">
          <button 
-            className="button--openAll">
+            className="button--openAll"
+            onClick={openAll}>
          </button>
          <button 
             className="button--addApps"

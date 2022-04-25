@@ -10,15 +10,16 @@ const AppContext = React.createContext();
 function AppProvider(props){
 
     const {
-       
-    } = useAppsLocalStorage('APPS_VP2', []);
+        app,
+        saveApp,
+    } = useAppsLocalStorage('APPS_VP2.1', []);
 
     const {
-        saveItem: saveTabs
-    } = useTabsLocalStorage('TABS_VP2', []);
+        tab,
+        saveTab,
+    } = useTabsLocalStorage('TABS_VP2.1', []);
 
-    const[apps,setApps] = React.useState([])
-    const [tabs,setTabs] = React.useState([])
+   
     const [openTabModal, setOpenTabModal] =  React.useState(false)
     const[openAddAppModal,setOpenAddAppModal] = React.useState(false)
     const [currentTab,setCurrentTab] = React.useState('')
@@ -27,14 +28,14 @@ function AppProvider(props){
         <AppContext.Provider value={{
             openTabModal,
             setOpenTabModal,
-            apps,
-            setApps,
+            app,
+            saveApp,
             openAddAppModal,
             setOpenAddAppModal,
+            tab,
+            saveTab,
             currentTab,
             setCurrentTab,
-            tabs,
-            setTabs
            }}>
            {props.children}
         </AppContext.Provider>

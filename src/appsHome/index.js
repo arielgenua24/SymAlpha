@@ -13,26 +13,24 @@ function AppsHome(props){
         setOpenAddAppModal,
         currentTab,
         setCurrentTab,
-        apps
+        app,
+        saveApp,
     } = React.useContext(AppContext) 
 
     let currentTabLength = currentTab.length;
 
+    console.log('currenTabLength')
+    console.log(currentTabLength)
+    
+
     const onClick = () => {
         setOpenAddAppModal(true)
-        console.log('hgoa')
-        console.log(currentTabLength)
+        
     }
 
     const openAll = () => {
-        let appsFilter = apps?.filter(app => app.appTabMother === currentTab)
-        console.log(appsFilter)
+        let appsFilter = app?.filter(app => app.appTabMother === currentTab)
         openAllFun(appsFilter)
-
-
-
-
-
 
     }
     

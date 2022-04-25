@@ -1,7 +1,7 @@
 
 const appsDB = [];
 
-class app {
+class apps {
     constructor({
         name,
         url,
@@ -15,4 +15,4 @@ class app {
     }
 }
 
-export {app,appsDB}
+export {apps,appsDB}

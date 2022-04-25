@@ -3,19 +3,13 @@ import {userName} from '../objectUser'
 import {newTab} from '../modalTabName/inputTabName'
 import { AppContext } from '../appContext';
 import './navBar.css'
-import { tab } from "@testing-library/user-event/dist/tab";
 
 function NavBar(props){
 
     const {
-        openTabModal,
-        setOpenTabModal,
-        apps,
-        setApps,
         currentTab,
         setCurrentTab,
-        tabs,
-        setTabs
+        tab,
     } = React.useContext(AppContext) 
 
 
@@ -25,22 +19,20 @@ function NavBar(props){
     }
 
     const showAppsButton =(param) => {
-        console.group('hola')
-           console.log(param)
-           setCurrentTab(param) //con esto ahora sabemos que nuestra pestaña actual es la que el usaurio toque.
-        
-
-        console.groupEnd()
+        console.log(param)
+        setCurrentTab(param) //con esto ahora sabemos que nuestra pestaña actual es la que el usaurio toque.
+    
+         //Me dispara un currentab anterior al setCurrentab, pero aun asi, se actualiza correcatamente.
 
     }
 
     const deleteTab = (param) => {
         //array.indexOf(2);
-        let tabsArray = tabs
+        let tabsArray = tab
         console.log(tabsArray)
 
 
-        let tabToDelete = tabs?.filter(tab => tab.tabsName === param)
+        let tabToDelete = tab?.filter(tab => tab.tabsName === param)
         let tabToDeleteIndex = tabsArray.indexOf(tabToDelete)
 
         tabsArray.splice(tabToDeleteIndex, 1)
@@ -65,13 +57,13 @@ function NavBar(props){
             +
             </button>
 
-           {tabs?.map(tab => (
+           {tab?.map(tabs => (
                  <div className="userTabs"> 
                     <button 
                         className="div__button--tabs"
-                        onClick={() => {showAppsButton(tab.tabsName)}}
+                        onClick={() => {showAppsButton(tabs.tabsName)}}
                         >
-                        {tab.tabsName} 
+                        {tabs.tabsName} 
 
                         
 

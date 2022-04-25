@@ -13,13 +13,11 @@ function useTabsLocalStorage(itemName,initialValue){
         parsedItem = JSON.parse(localStorageItem)
       }
   
-      const [item, setItem] = React.useState(parsedItem)
-      console.log(`local`)
-      console.log(item)
-      const saveItem = (newTodos) => {
+      const [tab, setTab] = React.useState(parsedItem)
+      const saveTab = (newTodos) => {
         const stringifiedTodos = JSON.stringify(newTodos)
         localStorage.setItem(itemName,stringifiedTodos)
-        setItem(newTodos)
+        setTab(newTodos)
   
   
       }
@@ -27,10 +25,10 @@ function useTabsLocalStorage(itemName,initialValue){
       //const [openWelcomeModal,setOpenWelcomeModal] = React.useState(true)
   
       return {
-        item,
-        saveItem,
-        parsedItem,
-        initialValue
+        tab,
+        saveTab,
+        //parsedItem,
+        //initialValue
     }
   
   

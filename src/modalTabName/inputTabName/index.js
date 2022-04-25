@@ -14,20 +14,18 @@ function InputTabName(){
         openTabModal,
         setOpenTabModal,
         appData,
-        tabs,
-        setTabs
+        tab,
+        saveTab
     } = React.useContext(AppContext) 
 
     const onChange = (event) => {
         let x = event.target.value;
-        console.log(x)
         setValue(x)
     };
 
 
     const onSubmit = (event) => {
         event.preventDefault();
-        console.log('chau chau amiguitos')
 
         /*let tabNames = userName.map(tabs => tabs.tabNames )
         console.log(tabNames) */
@@ -38,14 +36,12 @@ function InputTabName(){
             
         })
         userName.addTabs(newTab)
-        setTabs([...tabs, newTab])
+        saveTab([...tab, newTab])
 
         
-        let array = userName.tabs
+        let array = userName.tab
  
-
-        console.log('filtrador')
-        const tabsNamesFilter = array.map(x => x.tabsName)
+        //const tabsNamesFilter = array?.map(x => x.tabsName)
 
 
         setOpenTabModal(false)

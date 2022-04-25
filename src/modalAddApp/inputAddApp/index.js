@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {AppContext} from '../../appContext';
 import {tabs} from '../../objectTabs'
 import {userName} from '../../objectUser'
-import { app,appsDB } from "../../objectApps";
+import { apps,appsDB } from "../../objectApps";
 import { newTab } from "../../modalTabName/inputTabName";
 
 import './index.css'
@@ -21,8 +21,9 @@ function InputAddApp(){
         setCurrentTab,
         appData,
         tabsData,
-        apps,
-        setApps
+        app,
+        saveApp,
+        saveApps
     } = useContext(AppContext)
 
     const newName = (event) => {
@@ -36,7 +37,7 @@ function InputAddApp(){
     }
 
     const onSubmit = () => {
-        newApp = new app({
+        newApp = new apps({
             name: name,
             url: url,
             logo: logo,
@@ -48,13 +49,12 @@ function InputAddApp(){
         let appLogo = newApp.logo
         let appTabMother = newApp.tabMother
 
+        
         //appData.push({appName,appUrl,appLogo,appTabMother})
-        setApps([...apps,{appName,appUrl,appLogo,appTabMother}])
+    
+        saveApp([...app,{appName,appUrl,appLogo,appTabMother}])
 
-      console.group('nina')
-        console.log(apps)
 
-      console.groupEnd()
 
      setOpenAddAppModal(false)
 

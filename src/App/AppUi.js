@@ -22,7 +22,7 @@ function AppUi() {
     openAddAppModal,
     setOpenAddAppModal,
     setApps,
-    apps,
+    app,
     currentTab,
     setCurrentTab,
     appData,
@@ -31,7 +31,6 @@ function AppUi() {
 
 
 
-  console.group('filter')
 
   //currentab si funciona
 
@@ -47,10 +46,7 @@ function AppUi() {
     let appsFilter = newTab?.apps?.filter(app => app.appTabMother === currentTab)
     console.log(appsFilter) 
 
-    
-
-    
-
+  
     console.log(userName)
     console.log(userName.tabs)
 
@@ -64,14 +60,12 @@ function AppUi() {
     let currentApps = appsFilter3[0]?.apps
     console.log(currentApps) */
 
-    console.log('web3')
-    let appsFilter = apps?.filter(app => app.appTabMother === currentTab)
-    console.log(appsFilter)
+    let appsFilter = app?.filter(app => app.appTabMother === currentTab)
+
+    console.log('cuurentab')
+    console.log(currentTab)
 
 
-
-
-  console.groupEnd()
 
   
   
@@ -87,7 +81,6 @@ function AppUi() {
     />
 
     
-    {!!newTab && (
       <AppsHome>
       {appsFilter?.map(x => (
         <AppContainer
@@ -99,7 +92,6 @@ function AppUi() {
       ))}
         
     </AppsHome>
-    )} 
     
     
         

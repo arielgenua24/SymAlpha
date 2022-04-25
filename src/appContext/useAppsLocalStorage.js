@@ -13,13 +13,11 @@ function useAppsLocalStorage(itemName,initialValue){
         parsedItem = JSON.parse(localStorageItem)
       }
   
-      const [item, setItem] = React.useState(parsedItem)
-      console.log(`local`)
-      console.log(item)
-      const saveItem = (newTodos) => {
+      const [app, setApp] = React.useState(parsedItem)
+      const saveApp = (newTodos) => {
         const stringifiedTodos = JSON.stringify(newTodos)
         localStorage.setItem(itemName,stringifiedTodos)
-        setItem(newTodos)
+        setApp(newTodos)
   
   
       }
@@ -27,10 +25,10 @@ function useAppsLocalStorage(itemName,initialValue){
       //const [openWelcomeModal,setOpenWelcomeModal] = React.useState(true)
   
       return {
-        item,
-        saveItem,
-        parsedItem,
-        initialValue
+        app,
+        saveApp,
+        //parsedItem,
+        //initialValue
       }
   
   

@@ -5,4 +5,34 @@
     top: 1px;
     z-index: 9;
     background: beige;
+    display: flex;
+    justify-content: space;
+    align-items: center;
+    flex-direction: column;
+}
+
+.div__input--addApps > span, .div__input--addApps > label {
+    margin-top: 30px;
+}
+
+.div__input--addApps > input {
+    width: 200px;
+    height: 100px;
+}
+
+.button__submit {
+    width: 250px;
+    height: 100px;
+}
+
+.input__appName {
+
+}
+
+.input__url {
+
+}
+
+.input__appLogo {
+
 }

@@ -66,31 +66,35 @@ function InputAddApp(){
              className="div__input--addApps"
              onSubmit={onSubmit}>
 
-                <label>...</label>
+                <label>Añade tus apps!</label>
                 
 
+                <span>Nombre de la app</span>
                 <input  
                  value={name}
                  onChange={newName}
                  className="input__appName"
                 /> 
 
-
+                <span>Url de la app</span>
                 <input  
                  value={url}
                  onChange={newUrl}
                  className="input__url"
                 /> 
 
+                <span>URL para imagen del logo de la app</span>
                 <input
                  value={logo}
                  onChange={newLogo}
                  className="input__appLogo"
-                />
+                /> 
 
+                
                 <button
+                    className="button__submit"
                     type="submit"
-                ></button>
+                >Agregar</button>
 
             </form>
         </>

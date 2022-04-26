@@ -47,11 +47,14 @@ function AppsHome(props){
         <div className="div__buttons--container">
          <button 
             className="button--openAll"
-            onClick={openAll}>
+            onClick={openAll}> Abrir todo
          </button>
          <button 
             className="button--addApps"
-            onClick={onClick}></button>
+            onClick={onClick}>
+                Añadir App
+
+            </button>
 
         </div>
         )}

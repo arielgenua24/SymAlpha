@@ -1,6 +1,29 @@
 .userTabs {
-    background-color: rgb(52, 56, 56);
-    width: 150px;
-    height: 80px;
-    margin: 0px 20px 0px 0px;
+    /* background-color: rgb(52, 56, 56); */
+    /* width: 150px; */
+    /* height: 80px; */
+    margin: 0px 70px 0px 0px;
+}
+
+.div__button--tabs {
+    width: 170px;
+    height: 45px;
+    background-color: #C3927B;
+    font-size: 19px;
+    font-weight: 800;
+    border-style: none;
+    border-radius: 14px;
+}
+
+.div__button--addTabs {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 15px 0px 0px;
+    border-radius: 80px;
+    color: black;
+    font-size: 35px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }

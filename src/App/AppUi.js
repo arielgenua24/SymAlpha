@@ -9,9 +9,6 @@ import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
 import { newTab } from '../modalTabName/inputTabName';
 import {userName} from '../objectUser'
-
-
-
 import './App.css';
 
 function AppUi() {
@@ -72,7 +69,7 @@ function AppUi() {
   return (
     <>
   
-    <p>Say hi!! symphoniers</p>
+    <p>0.0.0.1 </p>
 
 
     <NavBar
@@ -81,7 +78,8 @@ function AppUi() {
     />
 
     
-      <AppsHome>
+      <AppsHome
+      >
       {appsFilter?.map(x => (
         <AppContainer
             key={x.appName}

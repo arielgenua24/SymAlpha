@@ -7,6 +7,8 @@ import {InputTabName} from '../modalTabName/inputTabName'
 import { InputAddApp } from '../modalAddApp/inputAddApp';
 import {AppsHome} from '../appsHome'
 import { AppContainer } from '../appsHome/appContainer';
+import { Welcome } from '../welcome';
+import { WelcomeModal } from '../welcome/welcomeModal';
 import { newTab } from '../modalTabName/inputTabName';
 import {userName} from '../objectUser'
 import './App.css';
@@ -108,6 +110,11 @@ function AppUi() {
             <InputAddApp/>
           </ModalApp>
     )}
+
+    <Welcome>
+          <WelcomeModal
+            />
+    </Welcome>
     
   
     </>

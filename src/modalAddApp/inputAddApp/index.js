@@ -6,11 +6,11 @@ import { apps,appsDB } from "../../objectApps";
 import { newTab } from "../../modalTabName/inputTabName";
 
 import './index.css'
-
+let appColor ;
 let newApp;
 
 function InputAddApp(){
-
+    const [color,setColor] = React.useState('Blanco')
     const [name,setName] = React.useState('')
     const [url,setUrl] = React.useState('')
     const [logo,setLogo] = React.useState('')
@@ -35,6 +35,7 @@ function InputAddApp(){
     const newLogo = (event) => {
         setLogo(event.target.value)
     }
+    
 
     const onSubmit = () => {
         newApp = new apps({
@@ -49,11 +50,23 @@ function InputAddApp(){
         let appLogo = newApp.logo
         let appTabMother = newApp.tabMother
 
+        let appUrlVerification = appUrl.slice(0,5)
+        console.log('verificacion app url')
+        console.log(appUrl)
+        console.log(appUrlVerification)
+
+        if(appUrlVerification != 'https'){
+             let oldAppUrl  = appUrl
+             appUrl = 'https://' + oldAppUrl;
+        }
+        console.log(appUrl)
         
-        //appData.push({appName,appUrl,appLogo,appTabMother})
+        //color
     
         saveApp([...app,{appName,appUrl,appLogo,appTabMother}])
 
+
+        //appData.push({appName,appUrl,appLogo,appTabMother})
 
 
      setOpenAddAppModal(false)
@@ -83,12 +96,40 @@ function InputAddApp(){
                  className="input__url"
                 /> 
 
-                <span>URL para imagen del logo de la app</span>
+                {/*<span>A donde te lleva la app?</span>
+                <input  
+                 value={url}
+                 onChange={newUrl}
+                 className="input__url"
+                 placeholder="youtube lofi"
+                />  */}
+
+                <span className="from__span--interest form__span--tips">
+                    Color de la app.
+                </span>
+
+                <select className="form__select1" onChange={(e)=>{
+                    appColor = e.target.value;
+                    setColor(appColor);
+                }}>
+                    <option value='Rojo' >Rojo</option>
+                    <option value='Azul'>Azul</option>
+                    <option value='Verde'>Verde</option>
+                    <option value='Amarillo'>Amarillo</option>
+                    <option value='Violeta'>Violeta</option>
+                    <option value='Celeste'>Celeste</option>
+                    <option value='Blanco'>Blanco</option>
+                    <option value='Negro'selected>Negro</option>
+
+                </select>
+
+
+                {/*<span>URL para imagen del logo de la app</span>
                 <input
                  value={logo}
                  onChange={newLogo}
                  className="input__appLogo"
-                /> 
+                />  */}
 
                 
                 <button
@@ -101,3 +142,6 @@ function InputAddApp(){
     )
 }
 export{InputAddApp}
+
+
+

@@ -8,14 +8,14 @@ let divWelcomeContainer = document.getElementsByClassName('div__welcome--contain
 
 function WelcomeModal() {
 
-      localStorageSesion = localStorage.getItem('USER_SESION.V0.0.0.1');
+      localStorageSesion = localStorage.getItem('USER_SESION.VR0.0');
     let parsedSesion;
 
 
     const onSubmit = (event) => {
         event.preventDefault();
        //Quizas al namevalue le falta el stringify!
-        localStorage.setItem('USER_SESION.V0.0.0.1','x');
+        localStorage.setItem('USER_SESION.VR0.0','x');
         console.log('modal')
 
         //const welcomeParent = document.getElementById("body")

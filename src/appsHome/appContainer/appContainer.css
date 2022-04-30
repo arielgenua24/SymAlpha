@@ -31,11 +31,10 @@
 
 
 }
-.section__img--logo{
+.section__color--logo{
   width: 30px;
   height: 30px;
   margin: 4px 20px 0px 7px;
-  background-color: rgb(255 255 255);
   border-style: solid;
   border-color: #f5f5fc;
   border-radius: 7px;

@@ -66,6 +66,8 @@ function InputAddApp(){
         console.log(appUrl)
         
     
+        console.log('input color?')
+        console.log(color)
     
         saveApp([...app,{appName,appUrl,appLogo,appTabMother,color,linkDescr}])
 

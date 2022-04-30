@@ -4,6 +4,7 @@ import {objectTabs} from '../../objectTabs'
 import {userName} from '../../objectUser'
 import './input.css'
 let newTab;
+let newValue;
 
 function InputTabName(){
 
@@ -26,13 +27,15 @@ function InputTabName(){
 
     const onSubmit = (event) => {
         event.preventDefault();
-
-        /*let tabNames = userName.map(tabs => tabs.tabNames )
-        console.log(tabNames) */
     
+        if(value.length >= 15 ) {
+            let oldValue = value;
+            newValue = `${oldValue.slice(0,11)}`
+        }
+
 
         newTab = new objectTabs({
-            tabsName: `${value}`,
+            tabsName: `${newValue}`,
             
         })
         userName.addTabs(newTab)
@@ -41,7 +44,7 @@ function InputTabName(){
         
         let array = userName.tab
  
-        //const tabsNamesFilter = array?.map(x => x.tabsName)
+
 
 
         setOpenTabModal(false)

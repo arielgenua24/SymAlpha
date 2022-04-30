@@ -60,7 +60,7 @@ function AppContainer(props){
                 <div className="section__div--links"
                 >
                     <span className="link">Links</span>
-                    <span className="section__span--link">{props.linkDesc}</span>
+                    <span className="section__span--link">{props.newLinkDescr}</span>
 
                 </div>
                 

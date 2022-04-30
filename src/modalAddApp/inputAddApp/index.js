@@ -8,6 +8,7 @@ import { newTab } from "../../modalTabName/inputTabName";
 import './index.css'
 let appColor ;
 let newApp;
+let newLinkDescr;
 
 function InputAddApp(){
     const [color,setColor] = React.useState('Blanco')
@@ -63,13 +64,17 @@ function InputAddApp(){
              let oldAppUrl  = appUrl
              appUrl = 'https://' + oldAppUrl;
         }
-        console.log(appUrl)
         
+
+        if(linkDescr.length >= 15 ) {
+            let oldlinkDescr = linkDescr;
+            newLinkDescr = `${oldlinkDescr.slice(0,15)} ...`  
+        } else {
+            newLinkDescr = linkDescr
+        }
     
-        console.log('input color?')
-        console.log(color)
     
-        saveApp([...app,{appName,appUrl,appLogo,appTabMother,color,linkDescr}])
+        saveApp([...app,{appName,appUrl,appLogo,appTabMother,color,newLinkDescr}])
 
 
         //appData.push({appName,appUrl,appLogo,appTabMother})

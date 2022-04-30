@@ -89,7 +89,7 @@ function AppUi() {
             appUrl={x.appUrl}
             appLogo={x.appLogo}
             color={x.color}
-            linkDesc={x.linkDescr}
+            newLinkDescr={x.newLinkDescr}
         />
       ))}
         

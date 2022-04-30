@@ -13,6 +13,7 @@ function InputAddApp(){
     const [color,setColor] = React.useState('Blanco')
     const [name,setName] = React.useState('')
     const [url,setUrl] = React.useState('')
+    const [linkDescr, setLinkDesc] = React.useState('')
     const [logo,setLogo] = React.useState('')
 
     const{
@@ -32,8 +33,11 @@ function InputAddApp(){
     const newUrl = (event) => {
         setUrl(event.target.value)
     }
-    const newLogo = (event) => {
+    /*const newColor = (event) => {
         setLogo(event.target.value)
+    } */
+    const linkDes = (event) => {
+        setLinkDesc(event.target.value)
     }
     
 
@@ -61,9 +65,9 @@ function InputAddApp(){
         }
         console.log(appUrl)
         
-        //color
     
-        saveApp([...app,{appName,appUrl,appLogo,appTabMother}])
+    
+        saveApp([...app,{appName,appUrl,appLogo,appTabMother,color,linkDescr}])
 
 
         //appData.push({appName,appUrl,appLogo,appTabMother})
@@ -96,13 +100,13 @@ function InputAddApp(){
                  className="input__url"
                 /> 
 
-                {/*<span>A donde te lleva la app?</span>
+                <span>A donde te lleva la app?</span>
                 <input  
-                 value={url}
-                 onChange={newUrl}
+                 value={linkDescr}
+                 onChange={linkDes}
                  className="input__url"
                  placeholder="youtube lofi"
-                />  */}
+                />  
 
                 <span className="from__span--interest form__span--tips">
                     Color de la app.

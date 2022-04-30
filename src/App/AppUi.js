@@ -71,7 +71,7 @@ function AppUi() {
   return (
     <>
   
-    <p>0.0.0.1 </p>
+    <p>0.0.02 </p>
 
 
     <NavBar
@@ -88,6 +88,8 @@ function AppUi() {
             appName={x.appName}
             appUrl={x.appUrl}
             appLogo={x.appLogo}
+            color={x.color}
+            linkDesc={x.linkDescr}
         />
       ))}
         

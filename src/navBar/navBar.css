@@ -5,25 +5,44 @@
     margin: 0px 70px 0px 0px;
 }
 
+.hr {
+    background-color: rgb(92 0 250 / 35%);
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+}
+
 .div__button--tabs {
     width: 170px;
     height: 45px;
-    background-color: #C3927B;
+    /* background-color: #C3927B; */
     font-size: 19px;
-    font-weight: 800;
+    font-weight: 500;
     border-style: none;
     border-radius: 14px;
+    color: #ADADFF;
+}
+
+.div__button--tabs:hover {
+	color: #FFF;
+	font-size: px;
+	border-style: solid;
+	border: 3px solid #fff;
 }
 
 .div__button--addTabs {
-    width: 40px;
+    /* width: 57px; */
     height: 40px;
-    background-color: rgb(255, 255, 255);
+    background-color: #4f4150;
     margin: 0px 15px 0px 0px;
     border-radius: 80px;
-    color: black;
+    color: #f5f5fc;
     font-size: 35px;
     display: flex;
     justify-items: center;
     align-items: center;
+    text-align: center;
+    padding: 0px 17px 0px 17px;
+    border-style: none;
 }

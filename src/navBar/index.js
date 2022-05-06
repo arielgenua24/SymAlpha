@@ -20,7 +20,10 @@ function NavBar(props){
 
     const showAppsButton =(param) => {
         console.log(param)
-        setCurrentTab(param) //con esto ahora sabemos que nuestra pestaña actual es la que el usaurio toque.
+        setCurrentTab(param) 
+        
+        
+        //con esto ahora sabemos que nuestra pestaña actual es la que el usaurio toque.
     
          //Me dispara un currentab anterior al setCurrentab, pero aun asi, se actualiza correcatamente.
 
@@ -61,7 +64,9 @@ function NavBar(props){
                  <div className="userTabs"> 
                     <button 
                         className="div__button--tabs"
-                        onClick={() => {showAppsButton(tabs.tabsName)}}
+                        onClick={() => {
+                            showAppsButton(tabs.tabsName)
+                        }}
                         >
                         {tabs.tabsName} 
 
@@ -72,6 +77,7 @@ function NavBar(props){
                 </div>
                    
             ))}
+            <hr className="hr"/>
 
         </div>
         

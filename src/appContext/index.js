@@ -12,12 +12,12 @@ function AppProvider(props){
     const {
         app,
         saveApp,
-    } = useAppsLocalStorage('APPS_VR0.0', []);
-
+    } = useAppsLocalStorage('APPS_VR0.1', []);
+    //APPS_VR0.0 TABS_VR0.0
     const {
         tab,
         saveTab,
-    } = useTabsLocalStorage('TABS_VR0.0', []);
+    } = useTabsLocalStorage('TABS_VR0.1', []);
 
    
     const [openTabModal, setOpenTabModal] =  React.useState(false)

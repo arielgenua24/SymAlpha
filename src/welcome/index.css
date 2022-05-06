@@ -17,7 +17,7 @@
 
 .div__welcome--container {
     background: #ffffff;
-    width: 90%;
+    width: 70%;
     height: 95%;
     display: flex;
     justify-content: center;
@@ -67,4 +67,15 @@
     font-weight: 700;
     font-size: 19px;
 
+}
+
+figure {
+    width: 100%;
+    height: auto;
+}
+
+figure > img {
+    width: 100%;
+    height: auto;
+    background-image: url(../../public/Tutorial.png);
 }

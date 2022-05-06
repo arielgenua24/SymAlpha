@@ -4,7 +4,7 @@
     height: 100%;
     top: 1px;
     z-index: 9;
-    background: beige;
+    background: #151516;
     display: flex;
     justify-content: space;
     align-items: center;
@@ -17,13 +17,39 @@
 
 .div__input--addApps > input {
     width: 200px;
-    height: 100px;
+    height: 45px;
+    background-color: #392e3a;
+    border-style: none;
+    border-radius: 21px;
+    margin: 4px 0px 10px 0px;
 }
 
 .button__submit {
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 50px;
+    margin: 40px 0px 0px 0px;
+    background-color: #ffffff;
+    color: #000;
+    border-style: none;
+    border-radius: 30px;
+    font-size: 27px;
+    font-weight: bold;
 }
+
+.form__label {
+    font-size: 17px;
+    background: #35192f00;
+    color: #b5afb6;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 45px 0px 22px 0px;
+    border-style: solid;
+}
+
+.form__span--interest {
+    font-size: 18px;
+}
+
 
 .input__appName {
 

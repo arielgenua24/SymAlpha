@@ -8,14 +8,14 @@ let divWelcomeContainer = document.getElementsByClassName('div__welcome--contain
 
 function WelcomeModal() {
 
-      localStorageSesion = localStorage.getItem('USER_SESION.VR0.0');
+      localStorageSesion = localStorage.getItem('USER_SESION.VR0.2');
     let parsedSesion;
 
 
     const onSubmit = (event) => {
         event.preventDefault();
-       //Quizas al namevalue le falta el stringify!
-        localStorage.setItem('USER_SESION.VR0.0','x');
+       //Quizas al namevalue le falta el stringify! USER_SESION.VR0.0
+        localStorage.setItem('USER_SESION.VR0.2','x');
         console.log('modal')
 
         //const welcomeParent = document.getElementById("body")
@@ -23,6 +23,7 @@ function WelcomeModal() {
         //welcomeParent.removeChild(welcomeDiv)
 
         welcomeModal.style.position = "inherit"
+        divWelcomeContainer.style.backgroundColor = '#ffffff00'
         divWelcomeContainer.style.background = '#ffffff00'
 
     }
@@ -30,7 +31,6 @@ function WelcomeModal() {
     const  onSecondSubmit = (event) => {
         event.preventDefault();
         welcomeModal.style.position = "inherit"
-        divWelcomeContainer.style.background = '#ffffff00'
        } 
 
 
@@ -49,7 +49,9 @@ function WelcomeModal() {
                     Aqui podras guardar tus app diarias para abrir todas con <b>1 solo click.</b>
                 </p>
 
-                <p className="Warning-p"><b>IMPORTANTE</b> Luego de agregar tus apps, le debes dar al boton abrir todo, la primera vez que le des click a este boton, Tu navegador no abrira todas las apps por ser ventanas emergentes. Debes desactivar esta funcion. Lo puedes hacer en esta misma pestaña usualmente arriba, donde controlas las pestañas de tus busquedas.</p>
+                {/*<figure className="Warning-figure"><p>IMPORTANTE</p> 
+                    <img alt="Warning-img"></img>
+                </figure> */}
 
                 <form
                 className="form"

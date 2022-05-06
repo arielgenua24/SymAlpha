@@ -85,7 +85,7 @@ function AppUi() {
       {appsFilter?.map(x => (
         <AppContainer
             key={x.appName}
-            appName={x.appName}
+            appName={x.newAppName}
             appUrl={x.appUrl}
             appLogo={x.appLogo}
             color={x.color}

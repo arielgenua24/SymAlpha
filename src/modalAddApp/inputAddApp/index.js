@@ -9,9 +9,10 @@ import './index.css'
 let appColor ;
 let newApp;
 let newLinkDescr;
+let newAppName;
 
 function InputAddApp(){
-    const [color,setColor] = React.useState('Blanco')
+    const [color,setColor] = React.useState('Negro')
     const [name,setName] = React.useState('')
     const [url,setUrl] = React.useState('')
     const [linkDescr, setLinkDesc] = React.useState('')
@@ -66,6 +67,14 @@ function InputAddApp(){
         }
         
 
+        if(appName.length > 10) {
+            let oldAppName = appName;
+            newAppName = `${oldAppName.slice(0,10)} ...`
+        } else {
+            newAppName = appName
+        }
+
+
         if(linkDescr.length >= 15 ) {
             let oldlinkDescr = linkDescr;
             newLinkDescr = `${oldlinkDescr.slice(0,15)} ...`  
@@ -74,7 +83,7 @@ function InputAddApp(){
         }
     
     
-        saveApp([...app,{appName,appUrl,appLogo,appTabMother,color,newLinkDescr}])
+        saveApp([...app,{newAppName,appUrl,appLogo,appTabMother,color,newLinkDescr}])
 
 
         //appData.push({appName,appUrl,appLogo,appTabMother})
@@ -90,7 +99,7 @@ function InputAddApp(){
              className="div__input--addApps"
              onSubmit={onSubmit}>
 
-                <label>Añade tus apps!</label>
+                <label className="form__label">Añade tus apps!</label>
                 
 
                 <span>Nombre de la app</span>
@@ -115,7 +124,7 @@ function InputAddApp(){
                  placeholder="youtube lofi"
                 />  
 
-                <span className="from__span--interest form__span--tips">
+                <span className="form__span--interest form__span--tips">
                     Color de la app.
                 </span>
 
@@ -123,14 +132,13 @@ function InputAddApp(){
                     appColor = e.target.value;
                     setColor(appColor);
                 }}>
-                    <option value='Rojo' >Rojo</option>
+                    <option value='Rojo' selected>Rojo</option>
                     <option value='Azul'>Azul</option>
                     <option value='Verde'>Verde</option>
                     <option value='Amarillo'>Amarillo</option>
                     <option value='Violeta'>Violeta</option>
                     <option value='Celeste'>Celeste</option>
-                    <option value='Blanco'>Blanco</option>
-                    <option value='Negro'selected>Negro</option>
+                    <option value='Negro'>Negro</option>
 
                 </select>
 

@@ -2,49 +2,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fffdfb54;
+  background-color: #fffdfb00;
   width: 380px;
   height: 200px;
   font-size: 20px;
   margin: 10px 40px 10px 10px;
   border-radius: 19px;
-
 }
 
 .app__container {
-  width: 78%;
+  width: 90%;
   height: 85%;
   display: flex;
   flex-direction: column;
-  background-color: rgb(254, 255, 255);
-  border-radius: 10px;
-
+  background-color: #3e3e40bf;
+  border-radius: 20px;
 
 }
 .section__div--appName {
   display: flex;
   height: 25%;
-  width: 100%;
+  width: 90%;
   flex-direction: row;
   margin: 1% 0% 10% 0%;
-  background-color: rgb(254, 255, 255);
-
-
+  margin-left: 3px;
+  background-color: #392e3a00;
 }
 .section__color--logo{
-  width: 30px;
-  height: 30px;
+  width: 138px;
+  height: 35px;
   margin: 4px 20px 0px 7px;
   border-style: solid;
-  border-color: #f5f5fc;
+  border-color: #f5f5fc00;
   border-radius: 7px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+  border-radius: 20px;
 }
 
 .section__span--appName {
   width: 30px;
   height: 30px;
-  color: #B5B5B5;
-  background-color: rgb(254, 255, 255);
+  color: #ffffff;
+  background-color: rgba(254, 255, 255, 0);
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -55,29 +57,36 @@
 
 
 .section__div--links {
-  display: flex;
-  flex-direction: column;
-  height: 30%;
-  width: 100%;
-  background-color: rgb(254, 255, 255);
-
+    /* align-items: flex-start; */
+    /* display: flex; */
+    flex-direction: column;
+    /* justify-content: center; */
+    height: 30%;
+    width: 100%;
+    background-color: rgb(254 255 255 / 0%);
+    margin-left: 18px;
 }
 
 .link{
   color: #1E6AFF;
   font-weight: 500;
-  background-color: rgb(254, 255, 255);
+  background-color: rgb(55 46 59);
 }
 
 .section__span--link {
-  width: 100%;
-  background-color: #F4F4FE;
-  color: black;
+  width: 90%;
+  height: 100%;
+  background-color: #555557;
+  color: rgb(255, 255, 255);
   /* overflow-x: scroll; */
   border-radius: 20px;
   display: flex;
   /* scroll-snap-type: x mandatory; */
   /* scroll-behavior: smooth; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 6px;
 
 }
 

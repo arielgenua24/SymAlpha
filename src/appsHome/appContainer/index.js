@@ -5,8 +5,9 @@ import './appContainer.css'
 function AppContainer(props){
 
     const userBackgroundColor = {
-        backgroundColor: '#F8F8FF',
-        background: ''
+        backgroundColor: '#000000',
+        background: '#000000',
+        color:'#ffffff'
     } 
 
     let userColor = props.color
@@ -21,17 +22,14 @@ function AppContainer(props){
         userBackgroundColor.backgroundColor = 'green'
         userBackgroundColor.background = 'green'
     } else if(userColor === 'Amarillo') {
-        userBackgroundColor.backgroundColor = 'yellow'
-        userBackgroundColor.background = 'yellow'
+        userBackgroundColor.backgroundColor = '#cdc105'
+        userBackgroundColor.background = '#cdc105'
     } else if(userColor === 'Violeta') {
-        userBackgroundColor.backgroundColor = 'purple'
-        userBackgroundColor.background = 'purple'
+        userBackgroundColor.backgroundColor = '#9406e4 '
+        userBackgroundColor.background = '#9406e4 '
     }else if(userColor === 'Celeste') {
-        userBackgroundColor.backgroundColor = 'lightBlue'
-        userBackgroundColor.background = 'lightBlue'
-    } else if(userColor === 'Blanco') {
-        userBackgroundColor.backgroundColor = 'white'
-        userBackgroundColor.background = 'white'
+        userBackgroundColor.backgroundColor = '#00c0ff'
+        userBackgroundColor.background = '#00c0ff'
     } else if(userColor === 'Negro') {
         userBackgroundColor.backgroundColor = 'black'
         userBackgroundColor.background = 'black'
@@ -59,7 +57,7 @@ function AppContainer(props){
                 
                 <div className="section__div--links"
                 >
-                    <span className="link">Links</span>
+                    <span className="link">Descripcion del link:</span>
                     <span className="section__span--link">{props.newLinkDescr}</span>
 
                 </div>

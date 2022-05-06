@@ -31,6 +31,8 @@ function InputTabName(){
         if(value.length >= 15 ) {
             let oldValue = value;
             newValue = `${oldValue.slice(0,11)}`
+        } else {
+            newValue = value
         }
 
 
@@ -42,7 +44,7 @@ function InputTabName(){
         saveTab([...tab, newTab])
 
         
-        let array = userName.tab
+       // let array = userName.tab
  
 
 
@@ -59,22 +61,22 @@ function InputTabName(){
         <form className="div__tabName"
             onSubmit={onSubmit}
         >
+
             <input
                 className="input--tabName"
                 type="text" 
                 value={value} 
                 onChange={onChange}
+                placeholder="Agregue el nombre de su pestaña aqui."
             ></input>
 
-            <p className="div__p">
-                Agregue el nombre de su pestaña
-            </p>
+            
 
             <button
-            className="button__submit"
+            className="button__submit--tabName"
                 type="submit"
             >
-            Listo
+            Agregar.
         </button>
 
 
